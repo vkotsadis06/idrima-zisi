@@ -103,12 +103,18 @@
         <p>Τηλέφωνο: 210 681 5624</p>
         <p>Ώρες Λειτουργίας: Ανοιχτό καθημερινά, κλείνει στις 22:00</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.858413057716!2d23.798529415648364!3d38.02499337971322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a198d5f2a5b9f5%3A0x4b4a7d2a4a4a4a4a!2z0J3RgtCw0L3QsNC50LzQvtC90L7QtNC40L3RgdC60LDRjyDQn9C40YHQu9C-0LLRgdC10Lkg0J_RgtC10YDQsNC9INCf0LXQvdC40YHRgtCy0L4g0JcuINCe0YDRiNCw!5e0!3m2!1sen!2sus!4v1709636742225!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <form class="mt-4">
-            <div class="mb-3"><input type="text" class="form-control" placeholder="Όνομα"></div>
-            <div class="mb-3"><input type="email" class="form-control" placeholder="Email"></div>
-            <div class="mb-3"><textarea class="form-control" placeholder="Μήνυμα" rows="4"></textarea></div>
-            <button type="submit" class="btn btn-primary">Αποστολή</button>
-        </form>
+    <form action="https://formspree.io/f/xreypypk" method="POST" class="mt-4">
+        <div class="mb-3">
+            <input type="text" name="Όνομα" class="form-control" placeholder="Όνομα" required>
+        </div>
+        <div class="mb-3">
+            <input type="email" name="Email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+            <textarea name="Μήνυμα" class="form-control" placeholder="Μήνυμα" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Αποστολή</button>
+    </form>
         <div class="mt-4">
             <h3>Εγγραφή στο Newsletter</h3>
             <input type="email" class="form-control d-inline-block w-50" placeholder="Εισάγετε το email σας">
@@ -126,4 +132,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
