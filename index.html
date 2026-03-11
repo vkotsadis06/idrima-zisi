@@ -95,53 +95,64 @@
 </section>
 
 <style>
-    .gallery-img {
-        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out !important;
-        cursor: pointer !important;
-        z-index: 1;
+    .gallery-slide-img {
+        height: 550px;
+        object-fit: cover;
+        object-position: center top;
+        cursor: pointer;
     }
-    .gallery-img:hover {
-        transform: scale(1.05) !important;
-        box-shadow: 0 15px 30px rgba(139, 69, 19, 0.6) !important;
-        z-index: 100 !important;
-        position: relative !important;
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: rgba(139, 69, 19, 0.9) !important;
+        border-radius: 50%;
+        padding: 20px;
+        background-size: 60%;
+    }
+    @media (max-width: 768px) {
+        .gallery-slide-img {
+            height: 350px;
+        }
     }
 </style>
 
 <section id="gallery" class="greek-motif py-5">
     <div class="container">
-        <h2 class="mb-4 text-center" style="color: #8B4513;">Γκαλερί</h2>
+        <h2 class="mb-5 text-center" style="color: #8B4513;">Γκαλερί</h2>
         
-        <div class="row g-4 justify-content-center align-items-center">
+        <div id="foundationGallery" class="carousel slide shadow-lg mx-auto" data-bs-ride="carousel" style="max-width: 900px; border-radius: 15px; overflow: hidden;">
             
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="roublouki.jpg" alt="Μουσικοχορευτική προσέγγιση από το Ρουμλούκι" loading="lazy" class="img-fluid rounded shadow-sm gallery-img">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="roublouki.jpg" alt="Ρουμλούκι" class="d-block w-100 gallery-slide-img gallery-img" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="rodos.jpg" alt="Ρόδος" class="d-block w-100 gallery-slide-img gallery-img" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://otavoice.gr/wp-content/uploads/2023/10/377218_281390081961912_525425784_n.jpg" alt="Παραδοσιακές στολές" class="d-block w-100 gallery-slide-img gallery-img" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.ytimg.com/vi/d5jm_ez07vM/maxresdefault.jpg" alt="Ομαδική παράσταση" class="d-block w-100 gallery-slide-img gallery-img" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.greece-is.com/wp-content/uploads/2017/04/KARELIA-KALAMATA-ZAVOS4.jpg" alt="Ελληνικές λαϊκές στολές" class="d-block w-100 gallery-slide-img gallery-img" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.elissos.com/wp-content/uploads/2025/04/greek-bouzouki.jpg" alt="Μπουζούκι" class="d-block w-100 gallery-slide-img gallery-img" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://news.gtp.gr/wp-content/uploads/2017/07/guitar-acoustic.jpg" alt="Κιθάρα" class="d-block w-100 gallery-slide-img gallery-img" loading="lazy">
+                </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="rodos.jpg" alt="Σεμινάριο με χορούς από τη Ρόδο" loading="lazy" class="img-fluid rounded shadow-sm gallery-img">
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="https://otavoice.gr/wp-content/uploads/2023/10/377218_281390081961912_525425784_n.jpg" alt="Παραδοσιακές στολές" loading="lazy" class="img-fluid rounded shadow-sm gallery-img">
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="https://i.ytimg.com/vi/d5jm_ez07vM/maxresdefault.jpg" alt="Ομαδική παράσταση παραδοσιακού χορού" loading="lazy" class="img-fluid rounded shadow-sm gallery-img">
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="https://www.greece-is.com/wp-content/uploads/2017/04/KARELIA-KALAMATA-ZAVOS4.jpg" alt="Ελληνικές λαϊκές στολές" loading="lazy" class="img-fluid rounded shadow-sm gallery-img">
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="https://www.elissos.com/wp-content/uploads/2025/04/greek-bouzouki.jpg" alt="Μαθήματα μπουζουκιού" loading="lazy" class="img-fluid rounded shadow-sm gallery-img">
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <img src="https://news.gtp.gr/wp-content/uploads/2017/07/guitar-acoustic.jpg" alt="Ακουστική κιθάρα" loading="lazy" class="img-fluid rounded shadow-sm gallery-img">
-            </div>
-
+            <button class="carousel-control-prev" type="button" data-bs-target="#foundationGallery" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Προηγούμενο</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#foundationGallery" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Επόμενο</span>
+            </button>
         </div>
     </div>
 </section>
@@ -241,6 +252,7 @@
 </body>
 
 </html>
+
 
 
 
