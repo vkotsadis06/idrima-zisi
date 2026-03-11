@@ -152,14 +152,13 @@ section {
 .testimonial:hover {
     background: #C4A484;
 }
-footer { 
-    background: #8B4513; 
-    color: white; 
-    text-align: center; 
-    padding: 1.5rem; 
-    position: relative; 
-    z-index: 1; 
-    margin-top: 2rem;
+/* Footer Links Hover */
+.footer-link {
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: #D2B48C !important;
+    text-decoration: underline !important;
 }
 @media (max-width: 768px) { 
     nav { flex-direction: column; } 
@@ -176,6 +175,7 @@ footer {
     background: #A0522D;
 
 }
+
 
 
 
