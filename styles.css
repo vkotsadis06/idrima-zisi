@@ -68,7 +68,7 @@ section {
 }
 .hero { 
     background: url('https://otavoice.gr/wp-content/uploads/2023/10/377218_281390081961912_525425784_n.jpg') no-repeat center/cover; 
-    height: 70vh; 
+    min-height: 100vh; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -184,6 +184,7 @@ section {
     color: #D2B48C !important;
     transform: scale(1.2); /* Μεγαλώνει ελαφρώς στο hover */
 }
+
 
 
 
