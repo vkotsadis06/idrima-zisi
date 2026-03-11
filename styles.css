@@ -175,6 +175,15 @@ section {
     background: #A0522D;
 
 }
+/* Εφέ στα εικονίδια των Social Media */
+.social-icon {
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+.social-icon:hover {
+    color: #D2B48C !important;
+    transform: scale(1.2); /* Μεγαλώνει ελαφρώς στο hover */
+}
 
 
 
