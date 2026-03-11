@@ -94,75 +94,51 @@
         </ul>
 </section>
 
-<style>
-    .gallery-slide-img {
-        height: 500px; /* Σταθερό ύψος για τις οθόνες υπολογιστή */
-        object-fit: cover; /* Καλύπτει όλο το χώρο χωρίς να παραμορφώνει */
-        object-position: top; /* Κεντράρει την εικόνα προς τα πάνω για να μη χάνουμε κεφάλια! */
-        border-radius: 10px;
-    }
-    
-    /* Σκουραίνουμε λίγο τα βελάκια και τους βάζουμε φόντο για να φαίνονται ΠΑΝΤΑ */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        background-color: rgba(139, 69, 19, 0.8); /* Το καφέ του ιδρύματος */
-        border-radius: 50%;
-        padding: 25px;
-    }
-
-    /* Πιο μικρό σταθερό ύψος για τα κινητά */
-    @media (max-width: 768px) {
-        .gallery-slide-img {
-            height: 350px;
-        }
-    }
-</style>
-
-<section id="gallery" class="greek-motif py-5">
+<section id="gallery" class="py-5">
     <div class="container">
-        <h2 class="mb-4 text-center" style="color: #8B4513;">Γκαλερί</h2>
+        <h2 class="mb-5 text-center" style="color: #8B4513;">Γκαλερί</h2>
         
-        <div id="foundationGallery" class="carousel slide carousel-fade shadow-lg" data-bs-ride="carousel" style="border-radius: 10px; overflow: hidden;">
+        <div id="foundationGallery" class="carousel slide shadow-lg" data-bs-ride="carousel" style="border-radius: 15px; overflow: hidden; max-width: 900px; margin: 0 auto;">
             
             <div class="carousel-inner">
                 
                 <div class="carousel-item active">
-                    <img src="roublouki.jpg" class="d-block w-100 gallery-slide-img" alt="Ρουμλούκι">
+                    <img src="roublouki.jpg" class="d-block w-100" style="height: 500px; object-fit: cover; object-position: top;" alt="Ρουμλούκι">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="rodos.jpg" class="d-block w-100 gallery-slide-img" alt="Ρόδος">
+                    <img src="rodos.jpg" class="d-block w-100" style="height: 500px; object-fit: cover; object-position: top;" alt="Ρόδος">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://otavoice.gr/wp-content/uploads/2023/10/377218_281390081961912_525425784_n.jpg" class="d-block w-100 gallery-slide-img" alt="Παραδοσιακές στολές">
+                    <img src="https://otavoice.gr/wp-content/uploads/2023/10/377218_281390081961912_525425784_n.jpg" class="d-block w-100" style="height: 500px; object-fit: cover; object-position: top;" alt="Παραδοσιακές στολές">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://i.ytimg.com/vi/d5jm_ez07vM/maxresdefault.jpg" class="d-block w-100 gallery-slide-img" alt="Ομαδική παράσταση">
+                    <img src="https://i.ytimg.com/vi/d5jm_ez07vM/maxresdefault.jpg" class="d-block w-100" style="height: 500px; object-fit: cover; object-position: top;" alt="Ομαδική παράσταση">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://www.greece-is.com/wp-content/uploads/2017/04/KARELIA-KALAMATA-ZAVOS4.jpg" class="d-block w-100 gallery-slide-img" alt="Ελληνικές λαϊκές στολές">
+                    <img src="https://www.greece-is.com/wp-content/uploads/2017/04/KARELIA-KALAMATA-ZAVOS4.jpg" class="d-block w-100" style="height: 500px; object-fit: cover; object-position: top;" alt="Ελληνικές λαϊκές στολές">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://www.elissos.com/wp-content/uploads/2025/04/greek-bouzouki.jpg" class="d-block w-100 gallery-slide-img" alt="Μπουζούκι">
+                    <img src="https://www.elissos.com/wp-content/uploads/2025/04/greek-bouzouki.jpg" class="d-block w-100" style="height: 500px; object-fit: cover; object-position: top;" alt="Μπουζούκι">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="https://news.gtp.gr/wp-content/uploads/2017/07/guitar-acoustic.jpg" class="d-block w-100 gallery-slide-img" alt="Κιθάρα">
+                    <img src="https://news.gtp.gr/wp-content/uploads/2017/07/guitar-acoustic.jpg" class="d-block w-100" style="height: 500px; object-fit: cover; object-position: top;" alt="Κιθάρα">
                 </div>
 
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#foundationGallery" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: rgba(139, 69, 19, 0.9); border-radius: 50%; padding: 25px;"></span>
                 <span class="visually-hidden">Προηγούμενο</span>
             </button>
             
             <button class="carousel-control-next" type="button" data-bs-target="#foundationGallery" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: rgba(139, 69, 19, 0.9); border-radius: 50%; padding: 25px;"></span>
                 <span class="visually-hidden">Επόμενο</span>
             </button>
 
@@ -265,6 +241,7 @@
 </body>
 
 </html>
+
 
 
 
