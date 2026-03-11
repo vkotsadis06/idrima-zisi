@@ -160,17 +160,17 @@ section {
     color: #D2B48C !important;
     text-decoration: underline !important;
 }
-/* Εφέ Γκαλερί */
+/* Εφέ Γκαλερί (Απόλυτη Προτεραιότητα) */
 .gallery-img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    cursor: pointer !important;
 }
 
 .gallery-img:hover {
-    transform: scale(1.05); /* Αυτό κάνει το zoom in κατά 5% */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important; /* Μεγαλώνει τη σκιά για να φαίνεται ότι σηκώνεται */
-    z-index: 2;
-    position: relative;
+    transform: scale(1.05) !important; 
+    box-shadow: 0 10px 25px rgba(139, 69, 19, 0.4) !important; /* Έβαλα και μια ελαφριά καφέ σκιά για να ταιριάζει με το θέμα! */
+    z-index: 10 !important;
+    position: relative !important;
 }
 @media (max-width: 768px) { 
     nav { flex-direction: column; } 
@@ -196,6 +196,7 @@ section {
     color: #D2B48C !important;
     transform: scale(1.2); /* Μεγαλώνει ελαφρώς στο hover */
 }
+
 
 
 
