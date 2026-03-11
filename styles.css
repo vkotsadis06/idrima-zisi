@@ -77,6 +77,10 @@ section {
     animation: fadeIn 2s forwards; /* Added forwards to keep opacity 1 */
     position: relative;
 }
+.hero h1, .hero p {
+    color: white !important;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+}
 .hero::before {
     content: '';
     position: absolute;
@@ -172,5 +176,6 @@ footer {
     background: #A0522D;
 
 }
+
 
 
