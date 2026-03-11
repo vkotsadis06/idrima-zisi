@@ -160,6 +160,18 @@ section {
     color: #D2B48C !important;
     text-decoration: underline !important;
 }
+/* Εφέ Γκαλερί */
+.gallery-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Αυτό κάνει το zoom in κατά 5% */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important; /* Μεγαλώνει τη σκιά για να φαίνεται ότι σηκώνεται */
+    z-index: 2;
+    position: relative;
+}
 @media (max-width: 768px) { 
     nav { flex-direction: column; } 
     nav ul { flex-direction: column; } 
@@ -184,6 +196,7 @@ section {
     color: #D2B48C !important;
     transform: scale(1.2); /* Μεγαλώνει ελαφρώς στο hover */
 }
+
 
 
 
