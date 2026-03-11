@@ -92,7 +92,23 @@
             <li><strong>Σεμινάριο Ρουμλούκι</strong> - Παρασκευή 27 Μαρτίου 2026, 19:30 - 22:00. Μουσικοχορευτική προσέγγιση χορών και εθίμων από το Ρουμλούκι.</li>
             <li><strong>Σεμινάριο Ρόδος</strong> - Σάββατο 28 Μαρτίου 2026. Εξερεύνηση χορών και παραδόσεων από τη Ρόδο.</li>
         </ul>
-    </section>
+</section>
+
+    <style>
+    .gallery-img {
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out !important;
+        cursor: pointer !important;
+        z-index: 1;
+    }
+    .gallery-img:hover {
+        transform: scale(1.08) !important; /* Το έκανα 1.08 για να είναι ΠΟΛΥ έντονο και να το δούμε σίγουρα */
+        box-shadow: 0 15px 30px rgba(139, 69, 19, 0.6) !important;
+        z-index: 100 !important;
+        position: relative !important;
+    }
+</style>
+
+<section id="gallery" class="greek-motif section-animate py-5">
 
     <section id="gallery" class="greek-motif section-animate py-5">
         <div class="container">
@@ -227,6 +243,7 @@
 </body>
 
 </html>
+
 
 
 
