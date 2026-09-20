@@ -56,3 +56,42 @@ galleryImgs.forEach(img => {
         });
     });
 });
+
+// Φόρτωση Εκδηλώσεων από το CMS
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('data/events.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Δεν βρέθηκε αρχείο');
+            return response.json();
+        })
+        .then(data => {
+            const eventsList = document.getElementById('dynamic-events-list');
+            if (!eventsList) return;
+            
+            eventsList.innerHTML = ''; // Καθαρίζουμε την οθόνη
+            
+            if (data.events && data.events.length > 0) {
+                data.events.forEach(event => {
+                    const li = document.createElement('li');
+                    li.className = 'mb-4 p-4 bg-white rounded shadow-sm border-start border-4';
+                    li.style.borderColor = '#8B4513';
+                    
+                    // Αν έχει ανεβάσει αφίσα, την εμφανίζουμε
+                    let imgHtml = event.image ? `<img src="${event.image}" class="img-fluid rounded mt-3 shadow-sm" style="max-height: 300px; object-fit: cover;">` : '';
+                    
+                    li.innerHTML = `
+                        <h4 style="color: #8B4513; margin-bottom: 0.5rem;">${event.title}</h4>
+                        <p class="text-muted mb-2"><strong><i class="bi bi-calendar3"></i> ${event.date}</strong></p>
+                        <p class="mb-0" style="font-size: 1.1rem;">${event.description}</p>
+                        ${imgHtml}
+                    `;
+                    eventsList.appendChild(li);
+                });
+            } else {
+                eventsList.innerHTML = '<p class="text-center">Δεν υπάρχουν προγραμματισμένες εκδηλώσεις αυτή τη στιγμή.</p>';
+            }
+        })
+        .catch(error => {
+            console.log('Αναμονή για καταχώρηση εκδηλώσεων...');
+        });
+});
