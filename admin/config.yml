@@ -2,6 +2,7 @@ backend:
   name: github
   repo: vkotsadis06/idrima-zisi # Το repository σου
   branch: main # Το branch σου
+  app_id: "Ov23liE61urPmCzqyd7x"
 
 # Πού θα αποθηκεύονται οι αφίσες που ανεβάζει η κ. Κατερίνα
 media_folder: "images/uploads"
