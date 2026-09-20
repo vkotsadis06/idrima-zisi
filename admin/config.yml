@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: vkotsadis06/idrima-zisi # Το repository σου
+  branch: main # Το branch σου
+
+# Πού θα αποθηκεύονται οι αφίσες που ανεβάζει η κ. Κατερίνα
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "events"
+    label: "Εκδηλώσεις / Ανακοινώσεις"
+    folder: "data/events" # Εδώ θα σώζονται τα JSON αρχεία
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Τίτλος Εκδήλωσης", name: "title", widget: "string"}
+      - {label: "Ημερομηνία", name: "date", widget: "datetime", date_format: "DD/MM/YYYY"}
+      - {label: "Περιγραφή", name: "description", widget: "text"}
+      - {label: "Αφίσα (Προαιρετικό)", name: "image", widget: "image", required: false}
