@@ -98,9 +98,10 @@
 <style>
     .gallery-slide-img {
         height: 550px;
-        object-fit: cover;
-        object-position: center top;
+        object-fit: contain; /* Το contain δεν κόβει ποτέ την εικόνα */
+        object-position: center; /* Κεντράρει την εικόνα τέλεια */
         cursor: pointer;
+        background-color: #F5F5DC; /* Το μπεζ φόντο του site για να δένει όμορφα, ή βάλε #000 για μαύρο */
     }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
