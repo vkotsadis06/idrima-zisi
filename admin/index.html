@@ -4,24 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Πίνακας Ελέγχου - Ίδρυμα Ζήση</title>
-    <!-- Το script που αναγκάζει το Decap να μιλήσει ΑΠΕΥΘΕΙΑΣ με το GitHub -->
+    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <script>
-      // Αυτό το κομμάτι ενεργοποιεί το PKCE Flow
-      CMS.init({
-        config: {
-          backend: {
-            name: 'github',
-            repo: 'vkotsadis06/idrima-zisi',
-            branch: 'main',
-            base_url: 'https://vkotsadis06.github.io', // To base URL σου
-            auth_endpoint: 'idrima-zisi/admin/' // Πού να γίνει το auth (Εκεί που δήλωσες το Callback)
-          }
-        }
-      });
-    </script>
   </body>
 </html>
