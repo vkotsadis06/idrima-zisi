@@ -6,14 +6,18 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "events"
-    label: "Εκδηλώσεις / Ανακοινώσεις"
-    folder: "data/events" # Εδώ θα σώζονται τα JSON αρχεία
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    format: "json"
-    fields:
-      - {label: "Τίτλος Εκδήλωσης", name: "title", widget: "string"}
-      - {label: "Ημερομηνία", name: "date", widget: "datetime", date_format: "DD/MM/YYYY"}
-      - {label: "Περιγραφή", name: "description", widget: "text"}
-      - {label: "Αφίσα (Προαιρετικό)", name: "image", widget: "image", required: false}
+  - name: "events_data"
+    label: "Διαχείριση Εκδηλώσεων"
+    files:
+      - label: "Λίστα Εκδηλώσεων"
+        name: "events_list"
+        file: "data/events.json"
+        fields:
+          - label: "Εκδηλώσεις"
+            name: "events"
+            widget: "list"
+            fields:
+              - {label: "Τίτλος Εκδήλωσης", name: "title", widget: "string"}
+              - {label: "Ημερομηνία", name: "date", widget: "datetime", date_format: "DD/MM/YYYY"}
+              - {label: "Περιγραφή", name: "description", widget: "text"}
+              - {label: "Αφίσα (Προαιρετικό)", name: "image", widget: "image", required: false}
