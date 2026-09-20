@@ -59,7 +59,7 @@ galleryImgs.forEach(img => {
 
 // Φόρτωση Εκδηλώσεων από το CMS
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('data/events.json')
+    fetch('data/events.json', { cache: 'no-store' })
         .then(response => {
             if (!response.ok) throw new Error('Δεν βρέθηκε αρχείο');
             return response.json();
